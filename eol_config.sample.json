@@ -1,0 +1,72 @@
+{
+  "_comment": [
+    "Copy this file to eol_config.json and edit to match your stack.",
+    "",
+    "Product names must match the endoflife.date API.",
+    "Browse https://endoflife.date/ to find valid product names,",
+    "or run:  curl https://endoflife.date/api/all.json",
+    "",
+    "Version must match a release cycle (not the full patch version).",
+    "To see available cycles:  curl https://endoflife.date/api/{product}.json",
+    "",
+    "notify_when: 'always'      = daily report regardless of alerts",
+    "             'alerts_only' = only when something is EOL or approaching",
+    "",
+    "notifications: list of output channels. Supported types:",
+    "  console   - print plain-text report to stdout",
+    "  html_file - write HTML report to 'path' (default: eol_report.html)",
+    "  sns       - publish plain-text to SNS topic (topic_arn or SNS_TOPIC_ARN env var)",
+    "  ses       - send HTML email via SES (from_email, to_emails, or env vars)"
+  ],
+
+  "alert_thresholds_days": [30, 60, 90],
+  "notify_when": "always",
+
+  "notifications": [
+    {"type": "console"},
+    {"type": "html_file", "path": "eol_report.html"}
+  ],
+
+  "products": [
+    {
+      "product": "spring-boot",
+      "version": "3.4",
+      "label": "Spring Boot 3.4"
+    },
+    {
+      "product": "spring-framework",
+      "version": "6.2",
+      "label": "Spring Framework 6.2"
+    },
+    {
+      "product": "nginx",
+      "version": "1.29",
+      "label": "Nginx 1.29"
+    },
+    {
+      "product": "alpine-linux",
+      "version": "3.21",
+      "label": "Alpine Linux 3.21"
+    },
+    {
+      "product": "amazon-corretto",
+      "version": "21",
+      "label": "Amazon Corretto (OpenJDK) 21"
+    },
+    {
+      "product": "react",
+      "version": "19",
+      "label": "ReactJS 19"
+    },
+    {
+      "product": "kotlin",
+      "version": "2.1",
+      "label": "Kotlin 2.1"
+    },
+    {
+      "product": "amazon-aurora-postgresql",
+      "version": "16",
+      "label": "AWS Aurora PostgreSQL 16"
+    }
+  ]
+}

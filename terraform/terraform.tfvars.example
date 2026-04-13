@@ -1,0 +1,4 @@
+aws_region         = "eu-west-1"
+config_bucket_name = "my-company-eol-config"      # must be globally unique
+notification_email = "team@example.com"
+schedule_expression = "cron(0 8 * * ? *)"          # 8:00 AM UTC daily

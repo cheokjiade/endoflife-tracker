@@ -1,0 +1,17 @@
+# Real config (contains your actual products — use eol_config.sample.json as a starting point)
+eol_config.json
+
+# Generated reports
+eol_report.html
+
+# Python
+__pycache__/
+*.pyc
+
+# Terraform
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/lambda.zip
+terraform/terraform.tfvars
